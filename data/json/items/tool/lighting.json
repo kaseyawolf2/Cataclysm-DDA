@@ -656,7 +656,7 @@
     "type": "ITEM",
     "subtypes": [ "TOOL" ],
     "name": { "str": "LED strip (inactive)", "str_pl": "LED strips (inactive)" },
-    "description": "25 feet of colorful LED strip, that are often used as house lights or on some holidays.",
+    "description": "25 feet of colorful LED strip, that are often used as house lights or on some holidays.  It must be connected to a power source via cable to function.",
     "weight": "158 g",
     "volume": "70 ml",
     "price": "10 USD",
@@ -665,6 +665,8 @@
     "material": [ { "type": "plastic", "portion": 1 }, { "type": "aluminum", "portion": 9 } ],
     "color": "white",
     "//": "25 feet (7.5 m) + 1.5 meters for plug",
+    "flags": [ "NO_UNLOAD", "NO_RELOAD", "WATER_BREAK" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 100 } } ],
     "use_action": [
       { "target": "lightstrip", "msg": "You turn on the LED strip.", "need_charges": 1, "type": "transform" },
       { "type": "link_up", "cable_length": 9, "charge_rate": "5 W" }
